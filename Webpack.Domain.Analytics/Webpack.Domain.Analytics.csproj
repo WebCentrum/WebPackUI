@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1E45344-F8F9-46DE-9A49-20DD1C29032E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Webpack.Domain.Analytics</RootNamespace>
+    <AssemblyName>Webpack.Domain.Analytics</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalyticsRunner.cs" />
+    <Compile Include="Crawler\CrawlerConfiguration.cs" />
+    <Compile Include="Crawler\DefaultCrawler.cs" />
+    <Compile Include="Crawler\Handlers\ImageHandler.cs" />
+    <Compile Include="Crawler\Handlers\ScriptHandler.cs" />
+    <Compile Include="Crawler\ICrawler.cs" />
+    <Compile Include="Crawler\HtmlAgilityPackLoader.cs" />
+    <Compile Include="Crawler\ILoader.cs" />
+    <Compile Include="Crawler\RawPageEqualityComparer.cs" />
+    <Compile Include="Crawler\ResourceHandler.cs" />
+    <Compile Include="Crawler\UriDTO.cs" />
+    <Compile Include="Crawler\UrlEqualityComparer.cs" />
+    <Compile Include="DocumentTypeAnalysis\IPropertyFactory.cs" />
+    <Compile Include="Extensions\TupleEqualityComparer.cs" />
+    <Compile Include="Extensions\UriSubstitutionVisitor.cs" />
+    <Compile Include="HierarchyAnalysis\MenuHierarchyFinder.cs" />
+    <Compile Include="DocumentTypeAnalysis\PropertyFactory.cs" />
+    <Compile Include="DocumentTypeAnalysis\SkeletonExtractor.cs" />
+    <Compile Include="DocumentTypeAnalysis\PageComparingFactory.cs" />
+    <Compile Include="DocumentTypeAnalysis\HtmlAttributeEqualityComparer.cs" />
+    <Compile Include="DocumentTypeAnalysis\HtmlMapping\Builder.cs" />
+    <Compile Include="DocumentTypeAnalysis\HtmlMapping\MappedNode.cs" />
+    <Compile Include="DocumentTypeAnalysis\HtmlMapping\PageDivisionInfo.cs" />
+    <Compile Include="DocumentTypeAnalysis\HtmlMapping\PropertyDTO.cs" />
+    <Compile Include="DocumentTypeAnalysis\MenuAnalyzer.cs" />
+    <Compile Include="DocumentTypeAnalysis\HtmlNodeEqualityComparer.cs" />
+    <Compile Include="DocumentTypeAnalysis\IMenuAnalyzer.cs" />
+    <Compile Include="DocumentTypeAnalysis\ISkeletonExtractor.cs" />
+    <Compile Include="DocumentTypeAnalysis\IPageComparingFactory.cs" />
+    <Compile Include="DocumentTypeAnalysis\PropertyIdentifier.cs" />
+    <Compile Include="HierarchyAnalysis\UrlTreeEqualityComparer.cs" />
+    <Compile Include="Extensions\LinqHelper.cs" />
+    <Compile Include="Extensions\NodePositionEqualityComparer.cs" />
+    <Compile Include="Extensions\RawPropertiesEqualityComparer.cs" />
+    <Compile Include="HierarchyAnalysis\HierarchyAnalyzer.cs" />
+    <Compile Include="HierarchyAnalysis\IHierarchyAnalyzer.cs" />
+    <Compile Include="HierarchyAnalysis\MenuHierarchyAnalyzer.cs" />
+    <Compile Include="ModelAnalysis\ArticlesSiteAnalyzer.cs" />
+    <Compile Include="ModelAnalysis\Organizer.cs" />
+    <Compile Include="ModelAnalysis\HierarchyOrganizer.cs" />
+    <Compile Include="ModelAnalysis\ModelAnalyzer.cs" />
+    <Compile Include="ModelAnalysis\PageModel.cs" />
+    <Compile Include="ModelAnalysis\Condition.cs" />
+    <Compile Include="PageTypeAnalysis\PageTypeAnalyzer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateAnalysis\TemplateAnalyzer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Webpack.Domain.Model\Webpack.Domain.Model.csproj">
+      <Project>{a9e110a5-0d28-4c3f-a559-14917cfa7ec4}</Project>
+      <Name>Webpack.Domain.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

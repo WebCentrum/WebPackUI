@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco", "Umbraco\Umbraco.csproj", "{00A00EC0-8A8A-43E0-9124-350B4A41D5A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebpackUI", "WebpackUI\WebpackUI.csproj", "{DD528479-0677-45DB-8A35-B2E3ADB9D8C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webpack.Domain.Analytics", "Webpack.Domain.Analytics\Webpack.Domain.Analytics.csproj", "{F1E45344-F8F9-46DE-9A49-20DD1C29032E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webpack.Domain.Model", "Webpack.Domain.Model\Webpack.Domain.Model.csproj", "{A9E110A5-0D28-4C3F-A559-14917CFA7EC4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00A00EC0-8A8A-43E0-9124-350B4A41D5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A00EC0-8A8A-43E0-9124-350B4A41D5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A00EC0-8A8A-43E0-9124-350B4A41D5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A00EC0-8A8A-43E0-9124-350B4A41D5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD528479-0677-45DB-8A35-B2E3ADB9D8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD528479-0677-45DB-8A35-B2E3ADB9D8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD528479-0677-45DB-8A35-B2E3ADB9D8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD528479-0677-45DB-8A35-B2E3ADB9D8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E45344-F8F9-46DE-9A49-20DD1C29032E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E45344-F8F9-46DE-9A49-20DD1C29032E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E45344-F8F9-46DE-9A49-20DD1C29032E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E45344-F8F9-46DE-9A49-20DD1C29032E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E110A5-0D28-4C3F-A559-14917CFA7EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E110A5-0D28-4C3F-A559-14917CFA7EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E110A5-0D28-4C3F-A559-14917CFA7EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E110A5-0D28-4C3F-A559-14917CFA7EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
